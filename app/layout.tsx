@@ -30,7 +30,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {/* Wrap the app content in a div with id="root" for react-modal */}
         <div id="root">{children}</div>
         <Footer />
       </body>
