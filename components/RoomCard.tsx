@@ -1,11 +1,21 @@
+import Image from "next/image";
 import BookingButton from "./BookingButton";
 
-export default function RoomCard({ room }) {
+interface Room {
+  image: string;
+  name: string;
+  description: string;
+  price: number;
+}
+
+export default function RoomCard({ room }: { room: Room }) {
   return (
     <div className="border rounded-lg overflow-hidden shadow-lg">
-      <img
+      <Image
         src={room.image}
         alt={room.name}
+        width={400}
+        height={192}
         className="w-full h-48 object-cover"
       />
       <div className="p-4">
